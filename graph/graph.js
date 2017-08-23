@@ -1,4 +1,5 @@
 'use strict';
+const assert = require('assert');
 
 // only for debugging purposes
 function co(s){
@@ -102,4 +103,5 @@ graph.connect(4, 5);
 graph.connect(6, 7);
 graph.print();
 console.log(graph.connected_components());
+assert.deepStrictEqual(graph.connected_components(), 6);
 console.log(graph.bfs(1, 7));
