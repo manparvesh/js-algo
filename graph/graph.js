@@ -101,7 +101,8 @@ graph.connect(1, 2);
 graph.connect(2, 3);
 graph.connect(4, 5);
 graph.connect(6, 7);
-graph.print();
-console.log(graph.connected_components());
 assert.deepStrictEqual(graph.connected_components(), 6);
-console.log(graph.bfs(1, 7));
+assert.deepStrictEqual(graph.bfs(1, 7), false);
+
+// all asserts passed, so our implementation is okay
+console.log("[OK] Graph");

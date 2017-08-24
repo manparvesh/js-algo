@@ -1,5 +1,7 @@
 'use strict';
 
+let assert = require('assert');
+
 class DisjointSet{
     // constructor function
     constructor(n){
@@ -61,5 +63,8 @@ let ds = new DisjointSet(10);
 ds.union(4, 5);
 ds.union(1, 2);
 ds.union(2, 4);
-console.log(ds.connected(1, 5)); // true
-console.log(ds.connected(1, 3)); // false
+assert.deepStrictEqual(ds.connected(1, 5), true); // true
+assert.deepStrictEqual(ds.connected(1, 3), false); // false
+
+// all asserts passed, so our implementation is okay
+console.log("[OK] Disjoint Set");

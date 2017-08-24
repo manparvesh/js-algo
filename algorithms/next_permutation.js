@@ -2,6 +2,8 @@ function co(s){
     console.log(s);
 }
 
+let assert = require('assert');
+
 function next_permutation(s){
     // 1 2 3 1 2
     // starting from the end, getting the first occurence of increasing 
@@ -47,6 +49,11 @@ let s = [1, 2, 3]
 np = next_permutation(s)
 while(np.result){
     s = np.string
-    co(s)
+    // co(s)
     np = next_permutation(s)
 }
+
+assert.deepStrictEqual(s, [3, 2, 1]);
+
+// all asserts passed, so our implementation is okay
+console.log("[OK] Next Permutation");

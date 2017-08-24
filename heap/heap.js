@@ -1,5 +1,7 @@
 'use strict';
 
+let assert = require('assert');
+
 /*
 Incomplete
 */
@@ -111,12 +113,17 @@ class Heap{
 	// bubbleUp()
 }
 
+// first complete implementation, then un-comment
+
 // testing code
-let heap = new Heap();
-let temp_array = [4, 2, 1, 5, 6, 7, 10, 8 ,9];
-co('Initial array: ' + temp_array.toString())
-heap.createHeapFromArray(temp_array);
-heap.print();
-console.log(heap.getMin());
-heap.insert(3);
-heap.print();
+// let heap = new Heap();
+// let temp_array = [4, 2, 1, 5, 6, 7, 10, 8 ,9];
+// co('Initial array: ' + temp_array.toString())
+// heap.createHeapFromArray(temp_array);
+// heap.print();
+// console.log(heap.getMin());
+// heap.insert(3);
+// heap.print();
+
+// all asserts passed, so our implementation is okay
+console.log("[INCOMPLETE] Linked List");

@@ -1,5 +1,7 @@
 'use strict';
 
+let assert = require('assert');
+
 class Queue{
 	constructor(){
 		this.ar = new Array();
@@ -37,7 +39,12 @@ q.enqueue(4);
 q.enqueue(5);
 q.enqueue(6);
 q.enqueue(7);
-q.print();
+// q.print();
+assert.deepStrictEqual(q.front(), 1);
+
 q.dequeue();
-q.print();
-console.log(q.front());
+// q.print();
+assert.deepStrictEqual(q.front(), 2);
+
+// all asserts passed, so our implementation is okay
+console.log("[OK] Queue");
